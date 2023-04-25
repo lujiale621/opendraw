@@ -1,0 +1,21 @@
+Python 3.10.9 (main, Jan 11 2023, 15:21:40) [GCC 11.2.0]
+Commit hash: c558abc51ff305d67361c1718a837e138eb6088a
+Installing requirements for Web UI
+Traceback (most recent call last):
+  File "/data1/lujiale/stable-diffusion-webui/launch.py", line 351, in <module>
+    prepare_environment()
+  File "/data1/lujiale/stable-diffusion-webui/launch.py", line 295, in prepare_environment
+    run_pip(f"install -r \"{requirements_file}\"", "requirements for Web UI")
+  File "/data1/lujiale/stable-diffusion-webui/launch.py", line 129, in run_pip
+    return run(f'"{python}" -m pip {args} --prefer-binary{index_url_line}', desc=f"Installing {desc}", errdesc=f"Couldn't install {desc}")
+  File "/data1/lujiale/stable-diffusion-webui/launch.py", line 87, in run
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, env=os.environ if custom_env is None else custom_env)
+  File "/home/lujiale/miniconda3/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/home/lujiale/miniconda3/lib/python3.10/subprocess.py", line 1154, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/home/lujiale/miniconda3/lib/python3.10/subprocess.py", line 2005, in _communicate
+    ready = selector.select(timeout)
+  File "/home/lujiale/miniconda3/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
